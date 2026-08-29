@@ -1,0 +1,122 @@
+
+ body{
+    h1 {
+       .press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(174, 25, 50);
+}
+ 
+    }
+  background-color: rgb(130, 191, 183);
+ }
+ /* 1. POSITIONING THE BOX (Moving it) */
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  background-color: #de178b;
+  padding: 20px;
+  
+  /* Flexbox makes it easy to move the child box around */
+  display: flex; 
+  align-items: center;     /* Moves it vertically: center, flex-start (top), or flex-end (bottom) */
+  justify-content: center; /* Moves it horizontally: center, flex-start (left), or flex-end (right) */
+}
+
+/* 2. CREATING THE BOX */
+.checklist-box {
+  background-color: #e6b2dd;
+  border: 2px solid #108d63;   /* The box border */
+  border-radius: 10px;         /* Rounded corners */
+  padding: 20px;               /* Space inside the box around your list */
+  box-shadow: 0 4px 12px rgba(21, 50, 41, 0.05); /* Soft drop shadow */
+  width: 100%;                 /* Takes up available space inside sidebar */
+  max-width: 280px;            /* Prevents it from getting too wide */
+}
+
+.box-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Pacifico,cursive ;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 3. YOUR EXISTING CHECKLIST STYLES (Slightly adjusted alignment) */
+.checkpoint-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkpoint-list::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 9px;
+  width: 2px;
+  background-color: #eee;
+}
+
+.checkpoint {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkpoint:last-child {
+  margin-bottom: 0;
+}
+
+.checkpoint input[type="checkbox"] {
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+.checkpoint label {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #154228;
+  cursor: pointer;
+}
+
+.checkpoint.active label {
+  color: #082a15;
+  font-weight: bold;
+}
+.screen-sticker {
+  position: fixed; 
+  
+  /* Positioning coordinates (adjust as needed) */
+  bottom: 20px;   /* 20px up from the bottom edge */
+  right: 20px;    /* 20px inside from the right edge */
+  
+  /* Controls the size of your sticker */
+  width: 120px;   
+  height: auto;   /* Maintains aspect ratio */
+  
+  /* Puts it on top of all other elements */
+  z-index: 9999;  
+
+  user-select: none;
+  pointer-events: none;
+
+  gato {
+    float: right;
+    width: 25px;
+    height: auto;
+    margin-left: 20px;
+  }
+ 
+  }
+ 
+
